@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4555116966370545768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8823078749201797036}
+  m_Layer: 0
+  m_Name: FireFromHere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8823078749201797036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555116966370545768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7314948390243619466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9209489600972110686
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,7 +45,9 @@ GameObject:
   - component: {fileID: 1903890274824869149}
   - component: {fileID: 1894770941391918755}
   - component: {fileID: 1845205068226149160}
+  - component: {fileID: 3570082112172448965}
   - component: {fileID: 8318952523210738493}
+  - component: {fileID: 2782608277693795201}
   m_Layer: 0
   m_Name: Cat Knight_0
   m_TagString: Player
@@ -34,7 +67,8 @@ Transform:
   m_LocalPosition: {x: -6.1639314, y: -1.36, z: 0}
   m_LocalScale: {x: 1.2135088, y: 1.2135088, z: 1.2135088}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8823078749201797036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8422498733138230896
@@ -194,6 +228,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3570082112172448965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209489600972110686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ea53cd3e739342a4aa1ce9b1ebe80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 9
+  maxHealth: 9
+  emptyHeart: {fileID: 5642012044021194823, guid: 4d036708d6d8dbf4cbca4f8490161203, type: 3}
+  fullHeart: {fileID: 4432793351920879750, guid: 4d036708d6d8dbf4cbca4f8490161203, type: 3}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerHealth: {fileID: 2782608277693795201}
 --- !u!114 &8318952523210738493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +267,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a47697704647f47b3f821a3d52eefc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  firePoint: {fileID: 0}
+  bullet: {fileID: 7073143338260935110, guid: 2af99fd559ea3bd40af5c50c3f3074cb, type: 3}
+  firePoint: {fileID: 4555116966370545768}
   fireForward: 1
   bulletForce: 1500
+--- !u!114 &2782608277693795201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209489600972110686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b9fe1bf53cd7241a818d2dcd8f53a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 10
+  playerSr: {fileID: 8422498733138230896}
+  playerMovement: {fileID: 1903890274824869149}
