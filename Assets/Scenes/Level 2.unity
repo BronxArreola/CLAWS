@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 492765918}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2343,6 +2343,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1002554005751409292, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2820143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002554005751409292, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5089928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002554005751409292, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845205068226149160, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7314948390243619466, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6779213
