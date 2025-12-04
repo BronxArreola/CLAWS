@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 8318952523210738493}
   - component: {fileID: 2782608277693795201}
   - component: {fileID: 1002554005751409292}
+  - component: {fileID: 2813016009156074803}
   m_Layer: 0
   m_Name: Cat Knight_0
   m_TagString: Player
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 500
+  jumpForce: 400
   isGrounded: 1
   shouldJump: 0
 --- !u!70 &1894770941391918755
@@ -335,3 +336,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.14, y: 1.3}
   m_EdgeRadius: 0
+--- !u!114 &2813016009156074803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209489600972110686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766127ef6d6867a439d6145c9df1bd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
+  damping: 0
+  target: {fileID: 7314948390243619466}
