@@ -347,6 +347,26 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   damping: 1
   target: {fileID: 1194143275}
+--- !u!1 &611025994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7393504287262083051, guid: 3105544ed5f344daf9affbeb6409937a, type: 3}
+  m_PrefabInstance: {fileID: 5575759877905157194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &611026003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611025994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab273476c86584cc4b5a65a79c89bdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelExitPrefab: {fileID: 4817878936557470613, guid: 2a96ac520f1554703bb1df2a87b7ea07, type: 3}
+  spawnPoint: {fileID: 0}
+  killsNeeded: 5
 --- !u!1 &626580920
 GameObject:
   m_ObjectHideFlags: 0
@@ -67543,7 +67563,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7393504287262083051, guid: 3105544ed5f344daf9affbeb6409937a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 611026003}
   m_SourcePrefab: {fileID: 100100000, guid: 3105544ed5f344daf9affbeb6409937a, type: 3}
 --- !u!1001 &9107372717580608770
 PrefabInstance:
