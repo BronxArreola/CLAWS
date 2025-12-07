@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelExitPrefab: {fileID: 4817878936557470613, guid: 2a96ac520f1554703bb1df2a87b7ea07, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 8101306892668877237, guid: 34eea2bf620234695b360b13d94a8b3d, type: 3}
   killsNeeded: 5
 --- !u!1 &626580920
 GameObject:
@@ -45967,6 +45967,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2782608277693795201, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 8101306892668877237, guid: 34eea2bf620234695b360b13d94a8b3d, type: 3}
     - target: {fileID: 3570082112172448965, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
       propertyPath: 'hearts.Array.data[0]'
       value: 
