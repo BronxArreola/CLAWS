@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 403630016536767686}
   - component: {fileID: 4935730691529864523}
   - component: {fileID: 407634009636914519}
+  - component: {fileID: 6494809882366823303}
+  - component: {fileID: 8192383651229910397}
+  - component: {fileID: 6392357623010535425}
   m_Layer: 0
   m_Name: GhostBoss
   m_TagString: Untagged
@@ -138,7 +141,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &407634009636914519
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -203,3 +206,50 @@ PolygonCollider2D:
       - {x: 1.6875, y: -0.25}
       - {x: 1.875, y: -0.3125}
   m_UseDelaunayMesh: 0
+--- !u!114 &6494809882366823303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991803664110576250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad298e622cb354ce8beafbcbe90865a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+--- !u!114 &8192383651229910397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991803664110576250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81cb82e2916534c07bac137601005cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  attackRange: 2
+  attackCooldown: 1
+  attackDamage: 10
+  player: {fileID: 0}
+--- !u!114 &6392357623010535425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2991803664110576250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83b11fbb9a8e4141b105c0fd6d979d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTarget: {fileID: 0}
+  attackRange: 2
+  attackCooldown: 2
+  projectilePrefab: {fileID: 0}
+  shotPoint: {fileID: 0}
