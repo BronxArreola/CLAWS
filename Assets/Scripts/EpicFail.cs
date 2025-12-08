@@ -1,22 +1,24 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class EpicFail : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D other)
+    public Transform respawnPoint; // assign in Inspector
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
+            // Move the player to the respawn point
+            collision.transform.position = respawnPoint.position;
 
-            // write something to the Console just to make 
-            // sure this function is being called
-            Debug.Log("there went Slimey!");
-
-            // use SceneManager to load the CURRENT scene again (a reset)
-            // the LoadScene function just wants a NUMBER of the scene to load
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // Optional: reset player velocity if using Rigidbody2D
+            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0;
+            }
         }
     }
-
 }
 

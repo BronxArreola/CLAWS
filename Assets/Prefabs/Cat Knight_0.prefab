@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 400
+  jumpForce: 600
   isGrounded: 1
   shouldJump: 0
 --- !u!70 &1894770941391918755
