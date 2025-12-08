@@ -121,6 +121,7 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &8197959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,6 +279,8 @@ PrefabInstance:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!1 &187661136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7393504287262083051, guid: 3105544ed5f344daf9affbeb6409937a, type: 3}
@@ -299,6 +302,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 7713819505065791138, guid: 75267e2e2946441139893d2dc80f969f, type: 3}
   killsNeeded: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1230,7 +1236,11 @@ TilemapRenderer:
   m_SortingLayer: 0
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_SortingOrder: 0
+=======
+  m_SortingOrder: -3
+>>>>>>> Stashed changes
 =======
   m_SortingOrder: -3
 >>>>>>> Stashed changes
@@ -94041,6 +94051,9 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75267e2e2946441139893d2dc80f969f, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -94052,6 +94065,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 1002554005751409292, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
@@ -94089,11 +94103,16 @@ PrefabInstance:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 2782608277693795201, guid: e4e746d6fd8bf154eba6fecc32abedde, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 8500820322028775830, guid: e8d3a74233c324291a9a833530c51938, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -94141,7 +94160,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -1.212
+=======
+      value: -1.22
+>>>>>>> Stashed changes
 =======
       value: -1.22
 >>>>>>> Stashed changes
@@ -94208,6 +94231,9 @@ SceneRoots:
   - {fileID: 6334960754265266808}
   - {fileID: 6787957880704157739}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
