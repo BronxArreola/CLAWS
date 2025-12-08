@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 9209489600972110686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1639314, y: -1.36, z: 0}
+  m_LocalPosition: {x: -6.1, y: -1.2628809, z: 0.030787913}
   m_LocalScale: {x: 1.2135088, y: 1.2135088, z: 1.2135088}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -285,9 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b9fe1bf53cd7241a818d2dcd8f53a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 10
   maxHealth: 10
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 8101306892668877237, guid: 34eea2bf620234695b360b13d94a8b3d, type: 3}
   playerSr: {fileID: 8422498733138230896}
   playerMovement: {fileID: 1903890274824869149}
 --- !u!61 &1002554005751409292
