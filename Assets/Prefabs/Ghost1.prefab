@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4501635984776208187}
   - component: {fileID: 5039520196085471104}
   - component: {fileID: -7103761713815126660}
+  - component: {fileID: 6365365999719627131}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.8417461, y: 1.7598909, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38128, y: 0.38128, z: 0.38128}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.8140596, y: -0.041747093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +187,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.4, y: 6.4}
+  m_Size: {x: 4.1874323, y: 3.3107533}
   m_EdgeRadius: 0
 --- !u!114 &4501635984776208187
 MonoBehaviour:
@@ -200,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20f2b770bab68348a03c0ad70164e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
-  damage: 3
+  damageAmount: 1
+  damageCooldown: 1
 --- !u!114 &5039520196085471104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goLeft: 1
   moveSpeed: 2
+  activationRange: 5
+  player: {fileID: 0}
 --- !u!114 &-7103761713815126660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,4 +232,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  deathEffect: {fileID: 0}
+--- !u!114 &6365365999719627131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393504287262083051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab273476c86584cc4b5a65a79c89bdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelExitPrefab: {fileID: 4817878936557470613, guid: 2a96ac520f1554703bb1df2a87b7ea07, type: 3}
+  spawnPoint: {fileID: 8101306892668877237, guid: 34eea2bf620234695b360b13d94a8b3d, type: 3}
+  killsNeeded: 5

@@ -2,26 +2,25 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
-    public int damage = 2;
+    public int damageAmount = 1;         
+    public float damageCooldown = 1f;     
+    private float nextDamageTime = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(damage);
+            // Only damage if cooldown is ready
+            if (Time.time >= nextDamageTime)
+            {
+                PlayerHealth player = other.GetComponent<PlayerHealth>();
+
+                if (player != null)
+                {
+                    player.TakeDamage(damageAmount);
+                    nextDamageTime = Time.time + damageCooldown;
+                }
+            }
         }
     }
 }
