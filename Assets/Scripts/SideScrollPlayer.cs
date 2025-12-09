@@ -3,18 +3,20 @@ using UnityEngine;
 public class SideScrollPlayer : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
+
     public float jumpForce = 500.0f;
 
     Rigidbody2D rb;
 
     public bool isGrounded = false;
+
     public bool shouldJump = false;
 
     Animator animator;
+
     SpriteRenderer spriteRenderer;
 
-    int groundContacts = 0;  // NEW – track how many ground colliders we’re touching
-
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,8 +24,10 @@ public class SideScrollPlayer : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    // Update is called once per frame
     void Update()
     {
+        // get horizontal input
         float horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(new Vector3(horizontalInput, 0, 0) * moveSpeed * Time.deltaTime);
@@ -52,34 +56,28 @@ public class SideScrollPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (shouldJump)
+        if (shouldJump == true)
         {
+            // quickly set back to false so we don't double-jump
             shouldJump = false;
-            rb.AddForce(Vector2.up * jumpForce);
+
+            //push the rigidbody UP
+            rb.AddForce(transform.up * jumpForce);
+
+            // animate!
             animator.SetBool("isJumping", true);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
-        {
-            groundContacts++;
-            isGrounded = true;
-            animator.SetBool("isJumping", false);
-        }
+        isGrounded = true;
+        // reset the animation
+        animator.SetBool("isJumping", false);
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
-        {
-            groundContacts = Mathf.Max(0, groundContacts - 1);
-
-            if (groundContacts == 0)
-            {
-                isGrounded = false;
-            }
-        }
+        isGrounded = false;
     }
 }

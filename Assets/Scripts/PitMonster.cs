@@ -4,32 +4,19 @@ public class PitMonster : MonoBehaviour
 {
     public bool goLeft = true;
     public float moveSpeed = 2.0f;
-
-    public float activationRange = 5f;     
-    public Transform player;              
-
     private float direction = -1.0f;
     private Vector3 startingScale;
-    private bool isActive = false;        
 
+    // Start is called before the first frame update
     void Start()
     {
         startingScale = transform.localScale;
     }
 
+    // Update is called once per frame
     void Update()
     {
-       
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (!isActive && distance <= activationRange)
-        {
-            isActive = true;
-        }
-
-        if (!isActive)
-            return;
-
+        // going left is along the negative X direction
         if (goLeft)
         {
             direction = -1.0f;
@@ -40,14 +27,12 @@ public class PitMonster : MonoBehaviour
             direction = 1.0f;
             transform.localScale = new Vector3(-startingScale.x, startingScale.y, startingScale.z);
         }
-
         transform.Translate(new Vector3(direction, 0, 0) * moveSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (isActive)
-            goLeft = !goLeft;
+        // change the direction we are heading
+        goLeft = !goLeft;
     }
 }

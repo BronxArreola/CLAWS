@@ -7,9 +7,6 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 10;
 
-    public Transform spawnPoint;
-
-
     public SpriteRenderer playerSr;
     public SideScrollPlayer playerMovement;
 
@@ -20,18 +17,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount)
-{
-    health -= amount;
-
-    if (health <= 0)
     {
-        transform.position = spawnPoint.position;
-
-        health = maxHealth;
-
-        playerSr.enabled = true;
-        playerMovement.enabled = true;
+        health -= amount;
+        if(health <= 0)
+        {
+            playerSr.enabled = false;
+            playerMovement.enabled = false;
+        }
     }
-}
-
 }
