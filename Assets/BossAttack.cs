@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    public Transform playerTarget; // Assign in Inspector or find by tag
+    public Transform playerTarget;
     public float attackRange = 5f;
-    public float attackCooldown = 2f; // Time between attacks
-    public GameObject projectilePrefab; // For ranged attacks
-    public Transform shotPoint; // Where projectile spawns
+    public float attackCooldown = 2f;
+    public int attackDamage = 10;
+
+    public GameObject projectilePrefab;
+    public Transform shotPoint;
 
     private Animator animator;
     private float nextAttackTime = 0f;
@@ -14,14 +16,12 @@ public class BossAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        // If not assigned in Inspector, find player by tag
+
         if (playerTarget == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
-            {
                 playerTarget = player.transform;
-            }
         }
     }
 
@@ -43,18 +43,19 @@ public class BossAttack : MonoBehaviour
 
     void Attack()
     {
-        // Example: Play an attack animation
         if (animator != null)
-        {
-            animator.SetTrigger("Attack"); // Assumes you have an "Attack" trigger in your Animator
-        }
+            animator.SetTrigger("Attack");
 
-        // Example: Ranged attack
         if (projectilePrefab != null && shotPoint != null)
-        {
             Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
-        }
 
-        // Add other attack logic here (e.g., melee damage, special abilities)
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTarget.position);
+
+        if (distanceToPlayer <= attackRange)
+        {
+            PlayerHealth health = playerTarget.GetComponent<PlayerHealth>();
+            if (health != null)
+                health.TakeDamage(attackDamage);
+        }
     }
 }
